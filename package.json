@@ -1,0 +1,19 @@
+{
+  "name": "space_apps_threshold",
+  "version": "1.0.0",
+  "description": "Space Apps 2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YiDingFang/SpaceAppsThreshold.git"
+  },
+  "author": "David Chambers, Prateek Sharma, Sharayu Nargolkar, YiDing Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YiDingFang/SpaceAppsThreshold/issues"
+  },
+  "homepage": "https://github.com/YiDingFang/SpaceAppsThreshold#readme"
+}
