@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.overlays {
+  position: absolute;
+  width: 408px;
+  top: 0;
+  left: 0;
+  height: 100%
+  z-index: 2;
+  background-image: linear-gradient(-143deg, #FAFAFA 0%, #7BA7BF 100%);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.47);
+}
+
+.ol_button {
+  width: 33px;
+  height: 26px;
+  background-image: url("../img/panel_menu.png");
+  float: right;
+  margin-top: 25px;
+  margin-right: 25px;
+  cursor: pointer;
+}
