@@ -149,6 +149,7 @@
           markersLayer.addLayer(marker);
         }
 
+
         function showRoute() {
           L.Routing.control({
             waypoints: [
@@ -156,17 +157,25 @@
                 L.latLng(37.395869, -122.148300)
                 ]
              }).addTo(map);
+             updateTextArea("Safe Evacuation Route Information Posted by nFerno");
+
         }
+
+
 
 
         markersLayer.on("click", function (event) {
           setFormData(event);
         });
 
+        function updateTextArea(string) {
+          var tareacontent = $('#textareav').val();
+          $('#textareav').val(tareacontent + timeStamp() + "  " + string + " \n");
+        }
+
 
         function changeIcon() {
-          var tareacontent = $('#textareav').val();
-          $('#textareav').val(tareacontent + timeStamp() + "  Dispatch contacted.  Truck on route \n");
+          updateTextArea("Dispatch contacted.  Truck on route");
           currentIcon.setIcon(m1Icon);
           $('#action_select').attr('disabled', 'disabled');
         }
@@ -174,7 +183,15 @@
 
         function timeStamp() {
           var date = new Date();
-          return date.getHours() + ":" + date.getMinutes();
+          var hours = date.getHours();
+          if (hours > 12) {
+            hours = hours - 12;
+          }
+          var minutes = date.getMinutes();
+          if (minutes < 10) {
+            minutes = "0"+ minutes.toString();
+          }
+          return hours + ":" + minutes;
         }
 
         function setFormData(e) {
