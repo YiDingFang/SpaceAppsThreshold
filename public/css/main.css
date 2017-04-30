@@ -21,6 +21,22 @@ html, body {
   z-index: 2;
   background-image: linear-gradient(-143deg, #FAFAFA 0%, #7BA7BF 100%);
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.47);
+  -webkit-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+   -moz-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+     -o-transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+        transition: all 100ms cubic-bezier(0.000, 0.000, 0.580, 1.000); /* ease-out */
+}
+
+.logo {
+  background-image: url("../img/logo.png");
+  width: 255px;
+  height: 56px;
+}
+
+.overlay_content {
+  margin-left: 25px;
+  margin-top: 2px;
+  float: left;
 }
 
 .ol_button {
@@ -31,4 +47,42 @@ html, body {
   margin-top: 25px;
   margin-right: 25px;
   cursor: pointer;
+}
+
+.divider {
+  margin-top: 29px;
+  border-top: 2px solid black;
+  width: 310px;
+}
+
+.contact_info {
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 95%;
+}
+
+.fgroup:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.flabel {
+font-family: Arial;
+font-weight: bold;
+font-size: 18px;
+color: #666666;
+padding: 4px;
+margin-bottom: 5px;
+float: left;
+}
+
+.fvalue {
+  float: right;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+  padding: 4px;
+  margin-bottom: 5px;
 }
